@@ -1,0 +1,271 @@
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>JavaScript - Как сделать слайдер для сайта</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <link rel="SHORTCUT ICON" href="icons/favicon.png" type="image/x-icon">
+  <style>
+    /*!
+     * chiefSlider (https://itchief.ru/lessons/php/feedback-form-for-website)
+     * Copyright 2018 Alexander Maltsev
+     * Licensed under MIT (https://github.com/itchief/feedback-form/blob/master/LICENSE)
+     */
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+      color: #fff;
+      height: 3000px;
+    }
+
+    .slider {
+      position: relative;
+      overflow: hidden;
+      padding: 100px;
+      margin-top: 200px;
+    }
+
+    .hover:hover {
+      opacity:0.7;
+      transition: 0.3s;
+    }
+
+    .slider__wrapper {
+      display: flex;
+      transition: transform 0.6s ease;
+    }
+
+    .slider__item {
+      flex: 0 0 33.333333%;
+      max-width: 33.333333%;
+    }
+
+    .slider__control {
+      position: absolute;
+      top: 50%;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      color: #fff;
+      text-align: center;
+      opacity: 0.5;
+      height: 50px;
+      transform: translateY(-50%);
+      background: rgba(0, 0, 0, .5);
+    }
+
+    .slider__control_show {
+      display: flex;
+    }
+
+    .slider__control:hover,
+    .slider__control:focus {
+      color: #fff;
+      text-decoration: none;
+      outline: 0;
+      opacity: .9;
+    }
+
+    .slider__control_left {
+      left: 0;
+    }
+
+    .slider__control_right {
+      right: 0;
+    }
+
+    .slider__control::before {
+      content: '';
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      background: transparent no-repeat center center;
+      background-size: 100% 100%;
+    }
+
+    .slider__control_left::before {
+      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+    }
+
+    .slider__control_right::before {
+      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+    }
+
+    .slider__item>div {
+      line-height: 250px;
+      font-size: 100px;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <!--ФОН-->
+<div class="body col-12 pr-0 pl-0">
+    <!--ШАПКА-->
+      <div class="header col-12 pr-5">
+        <div class="row">
+          <div class="logo"></div>
+             <div class="logo-text hover"> <a href="index0.html" style="text-decoration: none; color: black;">uchisakha</a></div>
+              <a href="profile.html" class="header-text mx-auto hover">Имя пользователя</a>
+              <button onclick="document.location='test.html'" type="button" class="btn" data-toggle="modal" data-target="#staticBackdrop" style=" background: #7AA7DE; font-family: Yanone Kaffeesatz; width: 150px; height: 40px; margin-top: 40px;">Пройти тест
+              </button>
+        </div>
+      </div>
+  <div class="slider">
+    <div class="slider__wrapper">
+        <div class="slider__item hover">
+        <a href="leksika1.html">
+         <div style="background-image: url(img/darkbg.jpg); background-size: 100% 100%; border-radius: 190px; height: 300px; width: 300px;">
+          <div class="mx-auto col-6">
+            <ion-icon name="text-outline" style="height: 120px; width: 120px; color: black;margin-top: 50px;"></ion-icon>
+            <h1 style="font-family: Yanone Kaffeesatz; font-size: 40px; color: white; margin-left: 5px;">Лексика</h1>
+          </div>
+         </div>
+        </a>
+        </div> 
+     
+      <div class="slider__item hover">
+        <a href="level1.html">
+          <div style="background-image: url(img/darkbg.jpg); background-size: 100% 100%; border-radius: 190px; height: 300px; width: 300px;">
+            <div class="mx-auto col-6">
+             <ion-icon name="book-outline" style="height: 120px; width: 120px; color: black;margin-top: 50px;"></ion-icon>
+             <h1 style="font-family: Yanone Kaffeesatz; font-size: 40px; color: white; margin-left: 15px;">Чтение</h1>
+           </div>
+         </div>
+        </a>
+      </div>
+      <div class="slider__item hover">
+        <a href="grammat1.html">
+          <div style="background-image: url(img/darkbg.jpg); background-size: 100% 100%; border-radius: 190px; height: 300px; width: 300px; margin-left: 0px; margin-right: 0px;">
+            <div class="mx-auto col-7">
+             <ion-icon name="pencil-outline" style="height: 120px; width: 120px; color: black;margin-top: 50px;"></ion-icon>
+             <h1 style="font-family: Yanone Kaffeesatz; font-size: 40px; color: white;">Грамматика</h1>
+           </div>
+         </div>
+        </a>
+      </div>
+      <div class="slider__item hover oplata">
+          <div style="background-image: url(img/darkbg.jpg); background-size: 100% 100%; border-radius: 190px; height: 300px; width: 300px;">
+             <ion-icon name="ear-outline" style="height: 120px; width: 120px; color: black;margin-top: 50px;"></ion-icon>
+             <h1 style="font-family: Yanone Kaffeesatz; font-size: 40px; color: white;">Аудирование</h1>
+         </div>
+      </div>
+      <div class="slider__item hover oplata">
+          <div style="background-image: url(img/darkbg.jpg); background-size: 100% 100%; border-radius: 190px; height: 300px; width: 300px;">
+             <ion-icon name="chatbubbles-outline" style="height: 120px; width: 120px; color: black;margin-top: 50px;"></ion-icon>
+             <h1 style="font-family: Yanone Kaffeesatz; font-size: 40px; color: white;">Говорение</h1>
+         </div>
+      </div>
+    </div>
+    <a class="slider__control slider__control_left" href="#" role="button"></a>
+    <a class="slider__control slider__control_right slider__control_show" href="#" role="button"></a>
+  </div>
+</div>
+  <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+  <script>
+    'use strict';
+    var multiItemSlider = (function () {
+      return function (selector, config) {
+        var
+          _mainElement = document.querySelector(selector), 
+          _sliderWrapper = _mainElement.querySelector('.slider__wrapper'),
+          _sliderItems = _mainElement.querySelectorAll('.slider__item'), 
+          _sliderControls = _mainElement.querySelectorAll('.slider__control'), 
+          _sliderControlLeft = _mainElement.querySelector('.slider__control_left'),
+          _sliderControlRight = _mainElement.querySelector('.slider__control_right'), 
+          _wrapperWidth = parseFloat(getComputedStyle(_sliderWrapper).width), 
+          _itemWidth = parseFloat(getComputedStyle(_sliderItems[0]).width), 
+          _positionLeftItem = 0, 
+          _transform = 0, 
+          _step = _itemWidth / _wrapperWidth * 100, 
+          _items = []; 
+    
+        _sliderItems.forEach(function (item, index) {
+          _items.push({ item: item, position: index, transform: 0 });
+        });
+
+        var position = {
+          getMin: 0,
+          getMax: _items.length - 1,
+        }
+
+        var _transformItem = function (direction) {
+          if (direction === 'right') {
+            if ((_positionLeftItem + _wrapperWidth / _itemWidth - 1) >= position.getMax) {
+              return;
+            }
+            if (!_sliderControlLeft.classList.contains('slider__control_show')) {
+              _sliderControlLeft.classList.add('slider__control_show');
+            }
+            if (_sliderControlRight.classList.contains('slider__control_show') && (_positionLeftItem + _wrapperWidth / _itemWidth) >= position.getMax) {
+              _sliderControlRight.classList.remove('slider__control_show');
+            }
+            _positionLeftItem++;
+            _transform -= _step;
+          }
+          if (direction === 'left') {
+            if (_positionLeftItem <= position.getMin) {
+              return;
+            }
+            if (!_sliderControlRight.classList.contains('slider__control_show')) {
+              _sliderControlRight.classList.add('slider__control_show');
+            }
+            if (_sliderControlLeft.classList.contains('slider__control_show') && _positionLeftItem - 1 <= position.getMin) {
+              _sliderControlLeft.classList.remove('slider__control_show');
+            }
+            _positionLeftItem--;
+            _transform += _step;
+          }
+          _sliderWrapper.style.transform = 'translateX(' + _transform + '%)';
+        }
+
+        
+        var _controlClick = function (e) {
+          if (e.target.classList.contains('slider__control')) {
+            e.preventDefault();
+            var direction = e.target.classList.contains('slider__control_right') ? 'right' : 'left';
+            _transformItem(direction);
+          }
+        };
+
+        var _setUpListeners = function () {
+         
+          _sliderControls.forEach(function (item) {
+            item.addEventListener('click', _controlClick);
+          });
+        }
+
+        
+        _setUpListeners();
+
+        return {
+          right: function () { 
+            _transformItem('right');
+          },
+          left: function () { 
+            _transformItem('left');
+          }
+        }
+
+      }
+    }());
+
+    var slider = multiItemSlider('.slider')
+  </script>
+  <script type="text/javascript">
+    let oplata = document.querySelectorAll('.oplata');
+    oplata[0].onclick = function(){
+      alert('Данный раздел необходимо приобрести.')
+    }
+    oplata[1].onclick = function(){
+      alert('Данный раздел необходимо приобрести.')
+    }
+  </script>
+</body>
+
+</html>				

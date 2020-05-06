@@ -1,0 +1,410 @@
+@font-face{
+	font-family: Yanone Kaffeesatz;
+	src: url(fonts/YanoneKaffeesatz-Regular.otf);
+}
+/* registration and enter */
+.reg {
+	position: relative;
+	height: 1000px;
+	background-image: url(img/bg.jpg);
+	background-size: 100% 100%;
+}
+.form{
+	width: 500px;
+	height: 643px;
+	margin-left: auto;
+	margin-right: auto;
+	background: rgba(255, 255, 255, 0.7);
+	border: 1px solid #888a89;
+	box-sizing: border-box;
+	border-radius: 20px;
+}
+.form1{
+	width: 500px;
+	height: 643px;
+	margin-left: auto;
+	margin-right: auto;
+	background: rgba(255, 255, 255, 0.7);
+	border: 1px solid #888a89;
+	box-sizing: border-box;
+	border-radius: 20px;
+}
+.title{
+	width: 235px;
+	height: 31px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 50px;
+
+	font-family: Yanone Kaffeesatz;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 50px;
+	line-height: 71px;
+
+	color: #7AA7DE;
+}
+.inpuut{
+	width: 400px;
+	height: 40px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 60px;
+
+	background: #FFFFFF;
+	border: 1px solid #000000;
+	box-sizing: border-box;
+	border-radius: 20px;
+}
+.regbtn{
+	width: 270px;
+	height: 55px;
+	margin-left: 60px;
+	margin-bottom: 10px;
+	background: #7AA7DE;
+	border: 1px solid #000000;
+	box-sizing: border-box;
+	border-radius: 20px;
+
+	font-family: Yanone Kaffeesatz;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 30px;
+	text-align: center;
+	line-height: 47px;
+
+	color: #FFFFFF;
+}
+
+/* header */
+
+.logo {
+	position: absolute;
+	width: 190px;
+	height: 190px;
+	left: 32px;
+	
+
+	background: url(img/winter.png);
+	background-size: 100% 100%;
+	border-radius: 500px;
+}
+.logo-text{
+	position: absolute;
+	width: 310px;
+	height: 46px;
+	left: 222px;
+	top: 13px;
+
+	font-family: Yanone Kaffeesatz;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 65px;
+	line-height: 95px;
+
+	color: #000000;
+}
+.header-text{
+	margin-left: auto;
+	width: 320px;
+	height: 60px;
+	margin-top: 25px;
+	font-family: Yanone Kaffeesatz;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 30px;
+	line-height: 65px;
+	text-align: right;
+	color: #000000;
+}
+.header-text1{
+	width: 90px;
+	text-align: right;
+	height: 55px;
+	margin-top: 25px;
+	font-family: Yanone Kaffeesatz;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 30px;
+	line-height: 65px;
+
+	color: #000000;
+}
+.header{
+	height: 130px;
+	background: rgba(255, 255, 255, 0.6);
+}
+
+/* body */
+
+.body-title{
+	height: 119px;
+	text-align: center;
+	font-family: Yanone Kaffeesatz;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 90px;
+	line-height: 119px;
+	color: #FBF8B0;
+	margin-top: 50px;
+}
+.level{
+	width: 365px;
+	height: 360px;
+	margin-left: 200px;
+	margin-top: 200px;
+	background-color: #000000;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	border-radius: 20px;
+	text-align: center;
+	font-family: Yanone Kaffeesatz;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 50px;
+	line-height: 59px;
+
+	color: #FFFFFF;
+}
+.body{
+	height: 1000px;
+	background-image: url(img/background.png);
+	background-size: 100% 100%;
+}
+.body1{
+	height: 1000px;
+	background-image: url(img/lightbg.jpg);
+	background-size: 100% 100%;
+}
+
+/* всплывающее окно */
+
+.window{
+	position: relative;
+	width: 826px;
+	height: 381px;
+
+	font-family: Yanone Kaffeesatz;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 25px;
+	line-height: 30px;
+	text-align: center;
+
+	background: #FFFFFF;
+}
+.window-text{
+	position: absolute;
+	width: 199px;
+	height: 103px;
+	left: 379px;
+	top: 72px;
+	color: #000000;
+}
+.window-btn{
+	position: absolute;
+	width: 204px;
+	height: 41px;
+	left: 377px;
+	top: 274px;
+
+	background: #7AA7DE;
+	border: 1px solid #000000;
+	box-sizing: border-box;
+	border-radius: 50px;
+	color: #FFFFFF;
+}
+
+/* разделы */
+
+.section{
+	width: 305px;
+	height: 300px;
+
+	background: url(img/darkbg.jpg);
+	border-radius: 191px;
+
+	font-family: Yanone Kaffeesatz;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 60px;
+	line-height: 71px;
+
+	color: #FFFFFF;
+}
+.section-img{
+	position: absolute;
+	width: 190px;
+	height: 190px;
+	left: 1464px;
+	top: 76px;
+
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.section-scroll{
+	position: absolute;
+	width: 1848px;
+	height: 451px;
+	left: 72px;
+	top: 503px;
+	overflow-x: scroll;
+
+}
+
+/* задания */
+
+.main-box{
+	position: absolute;
+	width: 1600px;
+	height: 710px;
+	left: 148px;
+	top: 340px;
+	background: #FFFFFF;
+	border: 3px solid #000000;
+	box-sizing: border-box;
+	border-radius: 20px;
+}
+.lesson-box{
+	width: 55%;
+	height: 280px;
+	margin-left: 12%;
+	margin-top: 3%;
+	background: #7AA7DE;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	border-radius: 20px;
+	box-sizing: border-box;
+	text-align: center;
+	padding-top: 1%;
+	padding-bottom: 0.6%;
+	border: 1px black solid;
+
+}
+.lesson-box-block{
+	width: 18%;
+	height: 280px;
+	margin-left: 12%;
+	margin-top: 3%;
+	background: #C4D6E4;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	border-radius: 20px;
+	box-sizing: border-box;
+	text-align: center;
+	padding-top: 7%;
+	padding-bottom: 1%;
+	border: 1px black solid;
+    opacity: 0.9;
+}
+.lesson-box-btm{
+	background: #C4D6E4;
+	width: 100%;
+	height: 72px;
+	font-family: Yanone Kaffeesatz;;
+	font-size: 155%;
+	color: #FBF8B0;
+	border-radius: 15px;
+	padding-top: 0.5%;
+	padding-bottom: 1%;
+	opacity: 0.9;
+}
+.tema{
+	height: 75%;
+	widows: 75%;
+}
+.lock{
+	height: 35%;
+	widows: 35%;
+}
+
+/* тест */
+
+.test-box{
+	width: 1729px;
+	height: 580px;
+	margin-left: auto;
+	margin-right: auto;
+	background: #FFFFFF;
+	border-radius: 20px;
+
+	font-family: Yanone Kaffeesatz;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 36px;
+	line-height: 43px;
+	/* identical to box height */
+
+	color: #000000;
+}
+.test-box1{
+	width: 1729px;
+	height: 580px;
+	margin-left: auto;
+	margin-right: auto;
+	background: #FFFFFF;
+	border-radius: 20px;
+
+	font-family: Yanone Kaffeesatz;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 36px;
+	line-height: 43px;
+	padding-top: 60px;
+	/* identical to box height */
+
+	color: #000000;
+}
+.test-box2{
+	width: 1729px;
+	height: 580px;
+	margin-left: auto;
+	margin-right: auto;
+	background: #FFFFFF;
+	border-radius: 20px;
+
+	font-family: Yanone Kaffeesatz;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 36px;
+	line-height: 43px;
+	padding-top: 60px;
+	/* identical to box height */
+
+	color: #000000;
+}
+.test-box3{
+	width: 1729px;
+	height: 580px;
+	margin-left: auto;
+	margin-right: auto;
+	background: #FFFFFF;
+	border-radius: 20px;
+	padding-top: 60px;
+
+	font-family: Yanone Kaffeesatz;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 36px;
+	line-height: 43px;
+	/* identical to box height */
+
+	color: #000000;
+}
+.answer{
+	position: absolute;
+	width: 255px;
+	height: 80px;
+	left: 300px;
+	top: 712px;
+
+	background: #C4C4C4;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	border-radius: 20px;
+}
+.test-arrow{
+	position: absolute;
+	width: 80px;
+	height: 80px;
+	left: 126px;
+	top: 557px;
+
+	background: url(chevron-back-circle-outline.png);
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}

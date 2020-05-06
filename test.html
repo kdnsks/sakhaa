@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>UchiSakha</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link rel="stylesheet" href="style.css">
+	<link rel="SHORTCUT ICON" href="icons/favicon.png" type="image/x-icon">
+	<style type="text/css">
+		.hover:hover {
+		  opacity:0.7;
+		  transition: 0.3s;
+		}
+		a{
+		    display: inline-block;
+			width: 500px;
+		}
+		a div{
+		    background: #000;  /* У блока, оборачивающего картинку при наведении будет просвечивать черный фон */
+		    overflow: hidden;  /* Ограничиваем видиую область */
+		}
+		a div img{
+		    opacity: 1;
+		    transition: opacity 124ms linear, transform 124ms linear;  /* Плавное изменение прозрачности и увеличения */
+			width: 100%;
+			height: auto;
+		    display: block; /* Убираем полосу под картинкий */
+		}
+		a:hover div img{
+		    opacity: 0.9; /* Высветляем картинку, но она становится темнее, так как под ней черный фон */
+		    transform: scale(1.05); /* Увеличение картинки */
+		}
+		a + a div{
+			background: #fff; /* Если необходимо высветление картинки при наведении, оборачивающий div должен иметь белый фон */
+		}
+		.fonts{
+			font-family: Times New Roman;
+		}
+	</style>
+</head>
+<body>
+	<!--ФОН-->
+	<div class="body1 col-12 pr-0 pl-0">
+		<!--ШАПКА-->
+			<div class="header col-12 pr-5">
+				<div class="row">
+					<div class="logo"></div>
+					<div class="logo-text hover">uchisakha</div>
+					<a href="profile.html" class="header-text mx-auto hover">Имя пользователя</a>
+			</div>
+		<!--КОНТЕНТ-->
+			<div style="margin-top: 100px;">
+				<div class="test-box1" style="display: none;">
+					<h1 style="font-family: Yanone Kaffeesatz; font-size: 50px;" class="mx-auto text-center">По результатам пройденного теста<br>Твой уровень: начинающий!</h1>
+					<div class="col-2 mx-auto"><img src="img/3.png" class="w-100"></div>
+					
+				</div>
+				<div class="test-box2" style="display: none;">
+					<h1 style="font-family: Yanone Kaffeesatz; font-size: 50px;" class="mx-auto text-center">По результатам пройденного теста<br>Твой уровень: средний!</h1>
+					<div class="col-2 mx-auto"><img src="img/3.png" class="w-100"></div>
+				</div>
+				<div class="test-box3" style="display: none;">
+					<h1 style="font-family: Yanone Kaffeesatz; font-size: 50px;" class="mx-auto text-center">По результатам пройденного теста<br>Твой уровень: продвинутый!</h1>
+					<div class="col-2 mx-auto"><img src="img/3.png" class="w-100"></div>
+				</div>
+				<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+				  <div class="carousel-inner">
+				    <div class="carousel-item active">
+				     	<div class="test-box" style="padding-top: 60px; padding-left: 200px;">
+				     		<div class="row col-11">
+				     			<h1 style="font-family: Yanone Kaffeesatz; font-size: 50px;">Подберите правильный перевод словосочетания «Добрый день»:</h1>
+				     			<p style="margin-left: auto; font-family: Yanone Kaffeesatz; font-size: 40px;">1/15</p>
+				     		</div>
+				     		<div class="row" style="margin-top: 200px;margin-left: 60px;font-size: 50px;">
+				     			<button type="button" class="f1 fonts btn btn-info" style="margin-left: 50px; width: 250px; border-radius: 18px;font-size: 40px;">Үтүө киэһэнэн</p>
+				     			</button>
+				     			<button type="button" class="f2 fonts btn btn-info" style="margin-left: 50px; width: 250px; border-radius: 18px;font-size: 40px;">Үтүө күнүнэн</p>
+				     			</button>
+				     			<button type="button" class="f3 fonts btn btn-info" style="margin-left: 50px; width: 250px; border-radius: 18px;font-size: 40px;">Этэҥҥэ буол</p> 
+				     			</button>
+				     			<button type="button" class="f4 fonts btn btn-info" style="margin-left: 50px; width: 250px; border-radius: 18px;font-size: 40px;">Дорообо</p>
+				     			</button>
+				     		</div>
+				     	</div>
+				    </div>
+				    <div class="carousel-item">
+				      <div class="test-box" style="padding-top: 60px; padding-left: 200px;">
+				     		<div class="row col-11">
+				     			<h1 style="font-family: Yanone Kaffeesatz; font-size: 50px;">Назовите специфические якутские гласные:</h1>
+				     			<p style="margin-left: auto; font-family: Yanone Kaffeesatz; font-size: 40px;">2/15</p>
+				     		</div>
+				     		<div class="row" style="margin-top: 200px;margin-left: 60px;font-size: 50px;">
+				     			<button type="button" class="s1 fonts btn btn-info" style="margin-left: 50px; width: 250px; border-radius: 18px;font-size: 40px;">Ү, үү, ө, өө</p>
+				     			</button>
+				     			<button type="button" class="s2 fonts btn btn-info" style="margin-left: 50px; width: 250px; border-radius: 18px;font-size: 40px;">А, аа, э, ээ, о</p>
+				     			</button>
+				     			<button type="button" class="s3 fonts btn btn-info" style="margin-left: 50px; width: 250px; border-radius: 18px;font-size: 40px;">Я, ю, е, ё</p> 
+				     			</button>
+				     			<button type="button" class="s4 fonts btn btn-info" style="margin-left: 50px; width: 250px; border-radius: 18px;font-size: 40px;">үө, иэ, ыа, уо</p>
+				     			</button>
+				     		</div>
+				     	</div>
+				    </div>
+				    <div class="carousel-item">
+				     <div class="test-box" style="padding-top: 60px; padding-left: 200px;">
+				     		<div class="row col-11">
+				     			<h1 style="font-family: Yanone Kaffeesatz; font-size: 50px;">В конце якутского слова не стоят:</h1>
+				     			<p style="margin-left: auto; font-family: Yanone Kaffeesatz; font-size: 40px;">3/15</p>
+				     		</div>
+				     		<div class="row" style="margin-top: 200px;margin-left: 60px;font-size: 50px;">
+				     			<button type="button" class="t1 fonts btn btn-info" style="margin-left: 50px; width: 250px; border-radius: 18px;font-size: 40px;">глухие солгасные</p>
+				     			</button>
+				     			<button type="button" class="t2 fonts btn btn-info" style="margin-left: 50px; width: 250px; border-radius: 18px;font-size: 40px;">звонкие согласные</p>
+				     			</button>
+				     			<button type="button" class="t3 fonts btn btn-info" style="margin-left: 50px; width: 250px; border-radius: 18px;font-size: 40px;">мягкие согласные</p> 
+				     			</button>
+				     			<button type="button" class="t4 fonts btn btn-info" style="margin-left: 50px; width: 250px; border-radius: 18px;font-size: 40px;">несколько согласных.</p>
+				     			</button>
+				     		</div>
+				     	</div>
+				    </div>
+				    <div class="carousel-item">
+				      <div class="test-box" style="padding-top: 60px; padding-left: 200px;">
+				     		<div class="row col-11">
+				     			<h1 style="font-family: Yanone Kaffeesatz; font-size: 50px;">К словам приветствия не относятся:
+				     			</h1>
+				     			<p style="margin-left: auto; font-family: Yanone Kaffeesatz; font-size: 40px;">4/15</p>
+				     		</div>
+				     		<div class="row" style="margin-top: 200px;margin-left: 60px;font-size: 50px;">
+				     			<button type="button" class="ft1 fonts btn btn-info" style="margin-left: 50px; width: 250px; border-radius: 18px;font-size: 40px;">Дорообо</p>
+				     			</button>
+				     			<button type="button" class="ft2 fonts btn btn-info" style="margin-left: 50px; width: 250px; border-radius: 18px;font-size: 40px;">Туох сонун?</p>
+				     			</button>
+				     			<button type="button" class="ft3 fonts btn btn-info" style="margin-left: 50px; width: 250px; border-radius: 18px;font-size: 40px;">Кэпсээниҥ?</p> 
+				     			</button>
+				     			<button type="button" class="ft4 fonts btn btn-info" style="margin-left: 50px; width: 250px; border-radius: 18px;font-size: 40px;">Бырастыы гын</p>
+				     			</button>
+				     		</div>
+				     	</div>
+				    </div>
+				    <div class="carousel-item">
+				     <div class="test-box" style="padding-top: 60px; padding-left: 200px;">
+				     		<div class="row col-11">
+				     			<h1 style="font-family: Yanone Kaffeesatz; font-size: 50px;">Антоним слова «маҥан»:
+				     			</h1>
+				     			<p style="margin-left: auto; font-family: Yanone Kaffeesatz; font-size: 40px;">5/15</p>
+				     		</div>
+				     		<div class="row" style="margin-top: 200px;margin-left: 60px;font-size: 50px;">
+				     			<button type="button" class="fi1 fonts btn btn-info" style="margin-left: 50px; width: 250px; border-radius: 18px;font-size: 40px;">Хараҥа</p>
+				     			</button>
+				     			<button type="button" class="fi2 fonts btn btn-info" style="margin-left: 50px; width: 250px; border-radius: 18px;font-size: 40px;">Хара</p>
+				     			</button>
+				     			<button type="button" class="fi3 fonts btn btn-info" style="margin-left: 50px; width: 250px; border-radius: 18px;font-size: 40px;">Сырдык</p> 
+				     			</button>
+				     			<button type="button" class="fi4 fonts btn btn-info" style="margin-left: 50px; width: 250px; border-radius: 18px;font-size: 40px;">Үрүҥ</p>
+				     			</button>
+				     		</div>
+				     	</div>
+				    </div>
+				    <div class="carousel-item">
+				       <div class="test-box" style="padding-top: 60px; padding-left: 200px;">
+				     		<div class="row col-11">
+				     			<h1 style="font-family: Yanone Kaffeesatz; font-size: 50px;">Синоним прилагательного «үрүҥ»:
+				     			</h1>
+				     			<p style="margin-left: auto; font-family: Yanone Kaffeesatz; font-size: 40px;">6/15</p>
+				     		</div>
+				     		<div class="row" style="margin-top: 200px;margin-left: 60px;font-size: 50px;">
+				     			<button type="button" class="si1 fonts btn btn-info" style="margin-left: 50px; width: 250px; border-radius: 18px;font-size: 40px;">Маҥан</p>
+				     			</button>
+				     			<button type="button" class="si2 fonts btn btn-info" style="margin-left: 50px; width: 250px; border-radius: 18px;font-size: 40px;">Сырдык</p>
+				     			</button>
+				     			<button type="button" class="si3 fonts btn btn-info" style="margin-left: 50px; width: 250px; border-radius: 18px;font-size: 40px;">Сылаас</p> 
+				     			</button>
+				     			<button type="button" class="si4 fonts btn btn-info" style="margin-left: 50px; width: 250px; border-radius: 18px;font-size: 40px;">Саҥа</p>
+				     			</button>
+				     		</div>
+				     	</div>
+				    </div>
+				    <div class="carousel-item">
+				     <div class="test-box" style="padding-top: 60px; padding-left: 200px;">
+				     		<div class="row col-11">
+				     			<h1 style="font-family: Yanone Kaffeesatz; font-size: 50px;">Прилагательное в якутском языке отвечает на вопрос:
+				     			</h1>
+				     			<p style="margin-left: auto; font-family: Yanone Kaffeesatz; font-size: 40px;">7/15</p>
+				     		</div>
+				     		<div class="row" style="margin-top: 200px;margin-left: 60px;font-size: 50px;">
+				     			<button type="button" class="se1 fonts btn btn-info" style="margin-left: 50px; width: 250px; border-radius: 18px;font-size: 40px;">Хайдаҕый</p>
+				     			</button>
+				     			<button type="button" class="se2 fonts btn btn-info" style="margin-left: 50px; width: 250px; border-radius: 18px;font-size: 40px;">Ханна</p>
+				     			</button>
+				     			<button type="button" class="se3 fonts btn btn-info" style="margin-left: 50px; width: 250px; border-radius: 18px;font-size: 40px;">Хаһан</p> 
+				     			</button>
+				     			<button type="button" class="se4 fonts btn btn-info" style="margin-left: 50px; width: 250px; border-radius: 18px;font-size: 40px;">Туох</p>
+				     			</button>
+				     		</div>
+				     	</div>
+				    </div>
+				    <div class="carousel-item">
+				      <div class="test-box" style="padding-top: 60px; padding-left: 200px;">
+				     		<div class="row col-11">
+				     			<h1 style="font-family: Yanone Kaffeesatz; font-size: 50px;">Наречие образуется с помощью аффикса:
+				    			</h1>
+				     			<p style="margin-left: auto; font-family: Yanone Kaffeesatz; font-size: 40px;">8/15</p>
+				     		</div>
+				     		<div class="row" style="margin-top: 200px;margin-left: 60px;font-size: 50px;">
+				     			<button type="button" class="e1 fonts btn btn-info" style="margin-left: 50px; width: 250px; border-radius: 18px;font-size: 40px;">–ым</p>
+				     			</button>
+				     			<button type="button" class="e2 fonts btn btn-info" style="margin-left: 50px; width: 250px; border-radius: 18px;font-size: 40px;">–лар</p>
+				     			</button>
+				     			<button type="button" class="e3 fonts btn btn-info" style="margin-left: 50px; width: 250px; border-radius: 18px;font-size: 40px;">–тык</p> 
+				     			</button>
+				     			<button type="button" class="e4 fonts btn btn-info" style="margin-left: 50px; width: 250px; border-radius: 18px;font-size: 40px;">–абын </p>
+				     			</button>
+				     		</div>
+				     	</div>
+				    </div>
+				    <div class="carousel-item">
+				      <div class="test-box" style="padding-top: 60px; padding-left: 200px;">
+				     		<div class="row col-11">
+				     			<h1 style="font-family: Yanone Kaffeesatz; font-size: 50px;">Лишнее в логической цепи слово:
+				    			</h1>
+				     			<p style="margin-left: auto; font-family: Yanone Kaffeesatz; font-size: 40px;">9/15</p>
+				     		</div>
+				     		<div class="row" style="margin-top: 200px;margin-left: 60px;font-size: 50px;">
+				     			<button type="button" class="n1 fonts btn btn-info" style="margin-left: 50px; width: 250px; border-radius: 18px;font-size: 40px;">Мин</p>
+				     			</button>
+				     			<button type="button" class="n2 fonts btn btn-info" style="margin-left: 50px; width: 250px; border-radius: 18px;font-size: 40px;">Эн</p>
+				     			</button>
+				     			<button type="button" class="n3 fonts btn btn-info" style="margin-left: 50px; width: 250px; border-radius: 18px;font-size: 40px;">Оҕолор</p> 
+				     			</button>
+				     			<button type="button" class="n4 fonts btn btn-info" style="margin-left: 50px; width: 250px; border-radius: 18px;font-size: 40px;">Кини</p>
+				     			</button>
+				     		</div>
+				     	</div>
+				    </div>
+				    <div class="carousel-item">
+				       <div class="test-box" style="padding-top: 60px; padding-left: 200px;">
+				     		<div class="row col-11">
+				     			<h1 style="font-family: Yanone Kaffeesatz; font-size: 50px;">Не отвечает на вопрос хайдаҕый?
+				    			</h1>
+				     			<p style="margin-left: auto; font-family: Yanone Kaffeesatz; font-size: 40px;">10/15</p>
+				     		</div>
+				     		<div class="row" style="margin-top: 200px;margin-left: 60px;font-size: 50px;">
+				     			<button type="button" class="te1 fonts btn btn-info" style="margin-left: 50px; width: 250px; border-radius: 18px;font-size: 40px;">Үчүгэй</p>
+				     			</button>
+				     			<button type="button" class="te2 fonts btn btn-info" style="margin-left: 50px; width: 250px; border-radius: 18px;font-size: 40px;">Куһаҕан</p>
+				     			</button>
+				     			<button type="button" class="te3 fonts btn btn-info" style="margin-left: 50px; width: 250px; border-radius: 18px;font-size: 40px;">Күн</p> 
+				     			</button>
+				     			<button type="button" class="te4 fonts btn btn-info" style="margin-left: 50px; width: 250px; border-radius: 18px;font-size: 40px;">Ыраас</p>
+				     			</button>
+				     		</div>
+				     	</div>
+				    </div>
+				    <div class="carousel-item">
+				      <div class="test-box" style="padding-top: 60px; padding-left: 200px;">
+				     		<div class="row col-11">
+				     			<h1 style="font-family: Yanone Kaffeesatz; font-size: 50px;">Не числительное:
+				    			</h1>
+				     			<p style="margin-left: auto; font-family: Yanone Kaffeesatz; font-size: 40px;">11/15</p>
+				     		</div>
+				     		<div class="row" style="margin-top: 200px;margin-left: 60px;font-size: 50px;">
+				     			<button type="button" class="el1 fonts btn btn-info" style="margin-left: 50px; width: 250px; border-radius: 18px;font-size: 40px;">Биир</p>
+				     			</button>
+				     			<button type="button" class="el2 fonts btn btn-info" style="margin-left: 50px; width: 250px; border-radius: 18px;font-size: 40px;">Уон</p>
+				     			</button>
+				     			<button type="button" class="el3 fonts btn btn-info" style="margin-left: 50px; width: 250px; border-radius: 18px;font-size: 40px;">Сүүрбэ</p> 
+				     			</button>
+				     			<button type="button" class="el4 fonts btn btn-info" style="margin-left: 50px; width: 250px; border-radius: 18px;font-size: 40px;">Саас</p>
+				     			</button>
+				     		</div>
+				     	</div>
+				    </div>
+				    <div class="carousel-item">
+				     <div class="test-box" style="padding-top: 60px; padding-left: 200px;">
+				     		<div class="row col-11">
+				     			<h1 style="font-family: Yanone Kaffeesatz; font-size: 50px;">Имя существительное не в притяжательном склонении:
+				    			</h1>
+				     			<p style="margin-left: auto; font-family: Yanone Kaffeesatz; font-size: 40px;">12/15</p>
+				     		</div>
+				     		<div class="row" style="margin-top: 200px;margin-left: 60px;font-size: 50px;">
+				     			<button type="button" class="tw1 fonts btn btn-info" style="margin-left: 50px; width: 250px; border-radius: 18px;font-size: 40px;">Оҕом</p>
+				     			</button>
+				     			<button type="button" class="tw2 fonts btn btn-info" style="margin-left: 50px; width: 250px; border-radius: 18px;font-size: 40px;">Оҕоҥ</p>
+				     			</button>
+				     			<button type="button" class="tw3 fonts btn btn-info" style="margin-left: 50px; width: 250px; border-radius: 18px;font-size: 40px;">Оҕото</p> 
+				     			</button>
+				     			<button type="button" class="tw4 fonts btn btn-info" style="margin-left: 50px; width: 250px; border-radius: 18px;font-size: 40px;">Оҕолор</p>
+				     			</button>
+				     		</div>
+				     	</div>
+				    </div>
+				    <div class="carousel-item">
+				      <div class="test-box" style="padding-top: 60px; padding-left: 200px;">
+				     		<div class="row col-11">
+				     			<h1 style="font-family: Yanone Kaffeesatz; font-size: 50px;">Обращение к отцу матери:
+				    			</h1>
+				     			<p style="margin-left: auto; font-family: Yanone Kaffeesatz; font-size: 40px;">13/15</p>
+				     		</div>
+				     		<div class="row" style="margin-top: 200px;margin-left: 60px;font-size: 50px;">
+				     			<button type="button" class="tten1 fonts btn btn-info" style="margin-left: 50px; width: 250px; border-radius: 18px;font-size: 40px;">Эһээ</p>
+				     			</button>
+				     			<button type="button" class="tten2 fonts btn btn-info" style="margin-left: 50px; width: 250px; border-radius: 18px;font-size: 40px;">Убаай</p>
+				     			</button>
+				     			<button type="button" class="tten3 fonts btn btn-info" style="margin-left: 50px; width: 250px; border-radius: 18px;font-size: 40px;">Тойоон</p> 
+				     			</button>
+				     			<button type="button" class="tten4 fonts btn btn-info" style="margin-left: 50px; width: 250px; border-radius: 18px;font-size: 40px;">Кырдьаҕаас</p>
+				     			</button>
+				     		</div>
+				     	</div>
+				    </div>
+				    <div class="carousel-item">
+				     <div class="test-box" style="padding-top: 60px; padding-left: 200px;">
+				     		<div class="row col-11">
+				     			<h1 style="font-family: Yanone Kaffeesatz; font-size: 50px;">Друг по-якутски нельзя перевести как:
+				    			</h1>
+				     			<p style="margin-left: auto; font-family: Yanone Kaffeesatz; font-size: 40px;">14/15</p>
+				     		</div>
+				     		<div class="row" style="margin-top: 200px;margin-left: 60px;font-size: 50px;">
+				     			<button type="button" class="ften1 fonts btn btn-info" style="margin-left: 50px; width: 250px; border-radius: 18px;font-size: 40px;">Табаарыс</p>
+				     			</button>
+				     			<button type="button" class="ften2 fonts btn btn-info" style="margin-left: 50px; width: 250px; border-radius: 18px;font-size: 40px;">Атас</p>
+				     			</button>
+				     			<button type="button" class="ften3 fonts btn btn-info" style="margin-left: 50px; width: 250px; border-radius: 18px;font-size: 40px;">Эрэт</p> 
+				     			</button>
+				     			<button type="button" class="ften4 fonts btn btn-info" style="margin-left: 50px; width: 250px; border-radius: 18px;font-size: 40px;">Доҕор</p>
+				     			</button>
+				     		</div>
+				     	</div>
+				    </div>
+				    <div class="carousel-item">
+				      <div class="test-box" style="padding-top: 60px; padding-left: 200px;">
+				     		<div class="row col-11">
+				     			<h1 style="font-family: Yanone Kaffeesatz; font-size: 50px;">Парные органы человека -
+				    			</h1>
+				     			<p style="margin-left: auto; font-family: Yanone Kaffeesatz; font-size: 40px;">15/15</p>
+				     		</div>
+				     		<div class="row" style="margin-top: 200px;margin-left: 60px;font-size: 50px;">
+				     			<button type="button" class="fiten1 fonts btn btn-info" style="margin-left: 50px; width: 250px; border-radius: 18px;font-size: 40px;">Бүөр</p>
+				     			</button>
+				     			<button type="button" class="fiten2 fonts btn btn-info" style="margin-left: 50px; width: 250px; border-radius: 18px;font-size: 40px;">Быар</p>
+				     			</button>
+				     			<button type="button" class="fiten3 fonts btn btn-info" style="margin-left: 50px; width: 250px; border-radius: 18px;font-size: 40px;">Төбө</p> 
+				     			</button>
+				     			<button type="button" class="fiten4 fonts btn btn-info" style="margin-left: 50px; width: 250px; border-radius: 18px;font-size: 40px;">Сүрэх</p>
+				     			</button>
+				     		</div>
+				     	</div>
+				    </div>
+				  </div>
+				  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+				    <span class="carousel-control-prev-icon bg-primary" aria-hidden="true"></span>
+				    <span class="sr-only">Previous</span>
+				  </a>
+				  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+				    <span class="carousel-control-next-icon bg-primary" aria-hidden="true"></span>
+				    <span class="sr-only">Next</span>
+				  </a>
+				</div>
+			</div>
+	</div>
+	<script type="text/javascript">
+		let score = 0;
+		let carousel = document.querySelector('.carousel');
+		let testBox1 = document.querySelector('.test-box1');
+		let testBox2 = document.querySelector('.test-box2');
+		let testBox3 = document.querySelector('.test-box3');
+		let f1 = document.querySelector('.f1');
+		let f2 = document.querySelector('.f2');
+		let f3 = document.querySelector('.f3');
+		let f4 = document.querySelector('.f4');
+		f1.onclick = function(){
+			score = score + 0;
+			f1.style.backgroundColor = '#c94444';
+		}
+		f2.onclick = function(){
+			score = score + 1;
+			f2.style.backgroundColor = '#23b84b';
+		}
+		
+		f3.onclick = function(){
+			score = score + 0;
+			f3.style.backgroundColor = '#c94444';
+		}
+		f4.onclick = function(){
+			score = score + 0;
+			f4.style.backgroundColor = '#c94444';
+		}
+
+
+		let s1 = document.querySelector('.s1');
+		let s2 = document.querySelector('.s2');
+		let s3 = document.querySelector('.s3');
+		let s4 = document.querySelector('.s4');
+		s1.onclick = function(){
+			score = score + 1;
+			s1.style.backgroundColor = '#23b84b';
+		}
+		s2.onclick = function(){
+			score = score + 0;
+			s2.style.backgroundColor = '#c94444';
+		}
+		s3.onclick = function(){
+			score = score + 0;
+			s3.style.backgroundColor = '#c94444';
+		}
+		s4.onclick = function(){
+			score = score + 0;
+			s4.style.backgroundColor = '#c94444';
+		}
+
+
+		let t1 = document.querySelector('.t1');
+		let t2 = document.querySelector('.t2');
+		let t3 = document.querySelector('.t3');
+		let t4 = document.querySelector('.t4');
+		t1.onclick = function(){
+			score = score + 0;
+			t1.style.backgroundColor = '#c94444';
+		}
+		t2.onclick = function(){
+			score = score + 1;
+			t2.style.backgroundColor = '#23b84b';
+		}
+		t3.onclick = function(){
+			score = score + 0;
+			t3.style.backgroundColor = '#c94444';
+		}
+		t4.onclick = function(){
+			score = score + 0;
+			t4.style.backgroundColor = '#c94444';
+		}
+
+
+		let ft1 = document.querySelector('.ft1');
+		let ft2 = document.querySelector('.ft2');
+		let ft3 = document.querySelector('.ft3');
+		let ft4 = document.querySelector('.ft4');
+		ft1.onclick = function(){
+			score = score + 0;
+			ft1.style.backgroundColor = '#c94444';
+		}
+		ft2.onclick = function(){
+			score = score + 0;
+			ft2.style.backgroundColor = '#c94444';
+		}
+		ft3.onclick = function(){
+			score = score + 0;
+			ft3.style.backgroundColor = '#c94444';
+		}
+		ft4.onclick = function(){
+			score = score + 1;
+			ft4.style.backgroundColor = '#23b84b';
+		}
+
+
+		let fi1 = document.querySelector('.fi1');
+		let fi2 = document.querySelector('.fi2');
+		let fi3 = document.querySelector('.fi3');
+		let fi4 = document.querySelector('.fi4');
+		fi1.onclick = function(){
+			score = score + 0;
+			fi1.style.backgroundColor = '#c94444';
+		}
+		fi2.onclick = function(){
+			score = score + 1;
+			fi2.style.backgroundColor = '#23b84b';
+		}
+		fi3.onclick = function(){
+			score = score + 0;
+			fi3.style.backgroundColor = '#c94444';
+		}
+		fi4.onclick = function(){
+			score = score + 0;
+			fi4.style.backgroundColor = '#c94444';
+		}
+
+
+		let si1 = document.querySelector('.si1');
+		let si2 = document.querySelector('.si2');
+		let si3 = document.querySelector('.si3');
+		let si4 = document.querySelector('.si4');
+		si1.onclick = function(){
+			score = score + 0;
+			si1.style.backgroundColor = '#c94444';
+		}
+		si2.onclick = function(){
+			score = score + 1;
+			si2.style.backgroundColor = '#23b84b';
+		}
+		si3.onclick = function(){
+			score = score + 0;
+			si3.style.backgroundColor = '#c94444';
+		}
+		si4.onclick = function(){
+			score = score + 0;
+			si4.style.backgroundColor = '#c94444';
+		}
+
+
+		let se1 = document.querySelector('.se1');
+		let se2 = document.querySelector('.se2');
+		let se3 = document.querySelector('.se3');
+		let se4 = document.querySelector('.se4');
+		se1.onclick = function(){
+			score = score + 1;
+			se1.style.backgroundColor = '#23b84b';
+		}
+		se2.onclick = function(){
+			score = score + 0;
+			se2.style.backgroundColor = '#c94444';
+		}
+		se3.onclick = function(){
+			score = score + 0;
+			se3.style.backgroundColor = '#c94444';
+		}
+		se4.onclick = function(){
+			score = score + 0;
+			se4.style.backgroundColor = '#c94444';
+		}
+
+
+		let e1 = document.querySelector('.e1');
+		let e2 = document.querySelector('.e2');
+		let e3 = document.querySelector('.e3');
+		let e4 = document.querySelector('.e4');
+		e1.onclick = function(){
+			score = score + 0;
+			e1.style.backgroundColor = '#c94444';
+		}
+		e2.onclick = function(){
+			score = score + 0;
+			e2.style.backgroundColor = '#c94444';
+		}
+		e3.onclick = function(){
+			score = score + 1;
+			e3.style.backgroundColor = '#23b84b';
+		}
+		e4.onclick = function(){
+			score = score + 0;
+			e4.style.backgroundColor = '#c94444';
+		}
+
+
+		let n1 = document.querySelector('.n1');
+		let n2 = document.querySelector('.n2');
+		let n3 = document.querySelector('.n3');
+		let n4 = document.querySelector('.n4');
+		n1.onclick = function(){
+			score = score + 0;
+			n1.style.backgroundColor = '#c94444';
+		}
+		n2.onclick = function(){
+			score = score + 0;
+			n2.style.backgroundColor = '#c94444';
+		}
+		n3.onclick = function(){
+			score = score + 1;
+			n3.style.backgroundColor = '#23b84b';
+		}
+		n4.onclick = function(){
+			score = score + 0;
+			n4.style.backgroundColor = '#c94444';
+		}
+
+		let te1 = document.querySelector('.te1');
+		let te2 = document.querySelector('.te2');
+		let te3 = document.querySelector('.te3');
+		let te4 = document.querySelector('.te4');
+		te1.onclick = function(){
+			score = score + 0;
+			te1.style.backgroundColor = '#c94444';
+		}
+		te2.onclick = function(){
+			score = score + 0;
+			te2.style.backgroundColor = '#c94444';
+		}
+		te3.onclick = function(){
+			score = score + 1;
+			te3.style.backgroundColor = '#23b84b';
+		}
+		te4.onclick = function(){
+			score = score + 0;
+			te4.style.backgroundColor = '#c94444';
+		}
+
+		let el1 = document.querySelector('.el1');
+		let el2 = document.querySelector('.el2');
+		let el3 = document.querySelector('.el3');
+		let el4 = document.querySelector('.el4');
+		el1.onclick = function(){
+			score = score + 0;
+			el1.style.backgroundColor = '#c94444';
+		}
+		el2.onclick = function(){
+			score = score + 0;
+			el2.style.backgroundColor = '#c94444';
+		}
+		el3.onclick = function(){
+			score = score + 0;
+			el3.style.backgroundColor = '#c94444';
+		}
+		el4.onclick = function(){
+			score = score + 1;
+			el4.style.backgroundColor = '#23b84b';
+		}
+
+
+		let tw1 = document.querySelector('.tw1');
+		let tw2 = document.querySelector('.tw2');
+		let tw3 = document.querySelector('.tw3');
+		let tw4 = document.querySelector('.tw4');
+		tw1.onclick = function(){
+			score = score + 0;
+			tw1.style.backgroundColor = '#c94444';
+		}
+		tw2.onclick = function(){
+			score = score + 0;
+			tw2.style.backgroundColor = '#c94444';
+		}
+		tw3.onclick = function(){
+			score = score + 0;
+			tw3.style.backgroundColor = '#c94444';
+		}
+		tw4.onclick = function(){
+			score = score + 1;
+			tw4.style.backgroundColor = '#23b84b';
+		}
+
+
+		let tten1 = document.querySelector('.tten1');
+		let tten2 = document.querySelector('.tten2');
+		let tten3 = document.querySelector('.tten3');
+		let tten4 = document.querySelector('.tten4');
+		tten1.onclick = function(){
+			score = score + 1;
+			tten1.style.backgroundColor = '#23b84b';
+		}
+		tten2.onclick = function(){
+			score = score + 0;
+			tten2.style.backgroundColor = '#c94444';
+		}
+		tten3.onclick = function(){
+			score = score + 0;
+			tten3.style.backgroundColor = '#c94444';
+		}
+		tten4.onclick = function(){
+			score = score + 0;
+			tten4.style.backgroundColor = '#c94444';
+		}
+
+
+		let ften1 = document.querySelector('.ften1');
+		let ften2 = document.querySelector('.ften2');
+		let ften3 = document.querySelector('.ften3');
+		let ften4 = document.querySelector('.ften4');
+		ften1.onclick = function(){
+			score = score + 0;
+			ften1.style.backgroundColor = '#c94444';
+		}
+		ften2.onclick = function(){
+			score = score + 0;
+			ften2.style.backgroundColor = '#c94444';
+		}
+		ften3.onclick = function(){
+			score = score + 1;
+			ften3.style.backgroundColor = '#23b84b';
+		}
+		ften4.onclick = function(){
+			score = score + 0;
+			ften4.style.backgroundColor = '#c94444';
+		}
+
+		let fiten1 = document.querySelector('.fiten1');
+		let fiten2 = document.querySelector('.fiten2');
+		let fiten3 = document.querySelector('.fiten3');
+		let fiten4 = document.querySelector('.fiten4');
+		fiten1.onclick = function(){
+			score = score + 1;
+			fiten1.style.backgroundColor = '#23b84b';
+			if (score>=0 && score<=6) {
+				carousel.style.display = 'none';
+				testBox1.style.display = 'block';
+			}
+			if (score>=7 && score<=13) {
+				carousel.style.display = 'none';
+				testBox2.style.display = 'block';
+			}
+			if (score>=14 && score<=15) {
+				carousel.style.display = 'none';
+				testBox3.style.display = 'block';
+			}
+		}
+		fiten2.onclick = function(){
+			score = score + 0;
+			fiten2.style.backgroundColor = '#c94444';
+			if (score>=0 && score<=6) {
+				carousel.style.display = 'none';
+				testBox1.style.display = 'block';
+			}
+			if (score>=7 && score<=13) {
+				carousel.style.display = 'none';
+				testBox2.style.display = 'block';
+			}
+			if (score>=14 && score<=15) {
+				carousel.style.display = 'none';
+				testBox3.style.display = 'block';
+			}
+		}
+		fiten3.onclick = function(){
+			score = score + 0;
+			fiten3.style.backgroundColor = '#c94444';
+			if (score>=0 && score<=6) {
+				carousel.style.display = 'none';
+				testBox1.style.display = 'block';
+			}
+			if (score>=7 && score<=13) {
+				carousel.style.display = 'none';
+				testBox2.style.display = 'block';
+			}
+			if (score>=14 && score<=15) {
+				carousel.style.display = 'none';
+				testBox3.style.display = 'block';
+			}
+		}
+		fiten4.onclick = function(){
+			score = score + 0;
+			fiten4.style.backgroundColor = '#c94444';
+			if (score>=0 && score<=6) {
+				carousel.style.display = 'none';
+				testBox1.style.display = 'block';
+			}
+			if (score>=7 && score<=13) {
+				carousel.style.display = 'none';
+				testBox2.style.display = 'block';
+			}
+			if (score>=14 && score<=15) {
+				carousel.style.display = 'none';
+				testBox3.style.display = 'block';
+			}
+		}
+
+	</script>
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>

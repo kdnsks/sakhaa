@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>UchiSakha</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link rel="stylesheet" href="style.css">
+	<link rel="SHORTCUT ICON" href="icons/favicon.png" type="image/x-icon">
+	<style type="text/css">
+		.hover:hover {
+		  opacity:0.7;
+		  transition: 0.3s;
+		}
+		a{
+		    display: inline-block;
+			width: 500px;
+		}
+		a div{
+		    background: #000;  /* У блока, оборачивающего картинку при наведении будет просвечивать черный фон */
+		    overflow: hidden;  /* Ограничиваем видиую область */
+		}
+		a div img{
+		    opacity: 1;
+		    transition: opacity 124ms linear, transform 124ms linear;  /* Плавное изменение прозрачности и увеличения */
+			width: 100%;
+			height: auto;
+		    display: block; /* Убираем полосу под картинкий */
+		}
+		a:hover div img{
+		    opacity: 0.9; /* Высветляем картинку, но она становится темнее, так как под ней черный фон */
+		    transform: scale(1.05); /* Увеличение картинки */
+		}
+		a + a div{
+			background: #fff; /* Если необходимо высветление картинки при наведении, оборачивающий div должен иметь белый фон */
+		}
+	</style>
+</head>
+<body>
+	<!--ФОН-->
+	<div class="body col-12 pr-0 pl-0">
+		<!--ШАПКА-->
+			<div class="header col-12 pr-5">
+				<div class="row">
+					<div class="logo"></div>
+			       <div class="logo-text hover"> <a href="index0.html" style="text-decoration: none; color: black;">uchisakha</a></div>
+			        <a href="profile.html" class="header-text mx-auto hover">Имя пользователя</a>
+			        <button onclick="document.location='test.html'" type="button" class="btn" data-toggle="modal" data-target="#staticBackdrop" style=" background: #7AA7DE; font-family: Yanone Kaffeesatz; width: 150px; height: 40px; margin-top: 40px;">Пройти тест
+			        </button>
+				</div>
+			</div>
+		<!--КОНТЕНТ-->
+			<div style="border-radius: 18px; background-color: white; border: 1px solid #7AA7DE; margin-top: 100px;" class="col-7 mx-auto text-center p-3">
+				<h1 style="text-align:; font-family: Yanone Kaffeesatz; font-size: 30px;">Прочитай внимательно текст и ответь на вопросы по прочитанному тексту</h1>
+				<h1 style="text-align:; font-family: Times New Roman; font-size: 30px;">Туун уонна кунус хайдах буоларый?</h1>
+				<div class="row">
+					<div style="text-align:justify; font-family: Times New Roman; font-size: 20px;" class="col-8">
+						<p>
+							Айдал уол киэһэ утуйуон баҕарбат, массыынанан оонньуурун сөбүлүүр эбит.<br>
+							Биирдэ наһаа өр ооньообутугар ийэтэ:<br>
+							-    Айдал, утуйдубут, түүн буолла, - диэбит, оттон уол:<br>
+							-    Тоҕо түүн буоларый? Мин наар күнүс буолуон баҕарабын ээ, - диэбит. Онуоха ийэтэ маннык быһаарбыт:<br>
+							-    Биһиги олорор планетабыт Сир диэн. Ыраахтан көрдөххө, мээчик курдук төгүрүк. Сир Күн утла тохтообокко эргийэр, оттон Сири Ый батыһан иһэр. Күн наһаа улахан, оттон Сир уонна Ый кыралар. Сир эргийэ сылдьан Күн диэки көрдөҕүнэ, биһиэхэ күнүс буолар – күн тыгар, таһырдьа сылыйар, туох барыта уһуктар. Оттон эргийэн-эргийэн Ый диэки көрдөҕүнэ, биһиэхэ түүн буолар – халаҥҥа Ый көстөр, таһырдьа сөрүүкүүр, туох барыта утуйар. Сир тохтообокко эргийэр, ол иһин күнүс кэнниттэн түүн кэлэр, түүн кэнниттэн күнүс буолар. Халлааны көр эрэ, билигин ый көстөр дуу, күн дуу?<br>
+							-    Халлааҥҥа ый көстөр, - диэбит Айдал уонна оонньуурдарын хомуйбут, тииһин суунан утуйа барбыт.
+						</p>
+					</div>
+					<div class="col-3">
+						<h1 style="text-align: center; font-family: Yanone Kaffeesatz; font-size: 30px;">Вопросы:</h1>
+							<p style="text-align: center; font-family: Times New Roman; font-size: 20px;">1) С кем разговаривает Айдал?<br>
+							2) Какой вопрос задал Айдал маме? Переведи его.</p>
+					</div>
+				</div>
+				<div class="row p-4">
+					<textarea style="margin-left: 250px;" class="form-control col-5" id="exampleFormControlTextarea1" rows="3"></textarea>
+					<button class="btn" style="background-color: #7AA7DE; color: white; font-family: Yanone Kaffeesatz; font-size: 20px;">Отправить</button>
+				</div>
+				
+			</div>
+			
+
+			
+	<script type="text/javascript">
+		
+	</script>
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>
